@@ -15,6 +15,9 @@
     --navbar-background-color:rgba(26, 164, 5, 0.625);
 }
 
+html{
+  background-color: rgb(0, 0, 0);
+}
 
 .navbar{
     display: flex;
@@ -70,6 +73,9 @@ ul li{
     text-decoration: none;
     font-weight: bolder;
     color:var(--text-color)
+}
+.navbar .logo:hover{
+    transform: scale(1.1);
 }
 
 .hero{
@@ -304,8 +310,6 @@ footer{
 }
 
 .social-links{
-    width: 500px;
-    margin:auto;
     padding:40px;
 }
 
@@ -344,7 +348,7 @@ footer{
   width: 100%;
   z-index: -2;
   height: 250%;
-  background: #000;
+  background: rgb(0, 0, 0);
   display: flex;
   overflow: hidden;
 }
@@ -643,6 +647,93 @@ footer{
     font-size: 12px;
     line-height: 14px;
     width: 15px;
+  }
+}
+
+@media screen and (max-width:1200px){
+  .hero{
+    padding:0 40px;
+    height:600px;
+  }
+
+  .hero img{
+    width:250px;
+    height:auto;
+  }
+
+  .hero-left{
+    width:400px;
+  }
+  .extra1,.extra2{
+    height:150px;
+    width:150px;
+  }
+  .extra1{
+    top:42%;
+  }
+  .extra2{
+    top:32%;
+  }
+  #html,#python{
+    top:27%
+  }
+  #css,#js{
+    top:62%
+  }
+}
+
+@media screen and (max-width:768px){
+  .hero{
+    flex-wrap:wrap;
+    margin:0;
+    height:800px;
+  }
+
+  .hero img{
+    width:250px;
+  }
+
+  .hero-right{
+    order:0;
+  }
+  .hero-left{
+    order:1;
+    margin-top:-200px;
+  }
+    .extra1,.extra2{
+    height:150px;
+    width:150px;
+  }
+  .extra1{
+    top:15%;
+    left:50%;
+  }
+  .extra2{
+    right:45%;
+    top:35%
+  }
+  .navbar{
+    justify-content: center;
+  }
+  .navbar .logo{
+    display:none;
+  }
+  #html,#python{
+    top:12%
+  }
+  #html,#css{
+    right:75%
+  }
+  #python,#js{
+    left:75%
+  }
+
+  #css,#js{
+    top:50%
+  }
+  .project{
+    width:300px;
+    height:auto;
   }
 }
 
